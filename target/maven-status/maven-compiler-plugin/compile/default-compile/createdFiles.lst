@@ -1,0 +1,11 @@
+com\appsfactory\base\Base.class
+com\appsfactory\stepDefinitions\ServiceHooks.class
+appsfactory\appsfactory\App.class
+com\appsfactory\enums\Browsers.class
+com\appsfactory\enums\OS.class
+com\appsfactory\helper\LoggerHelper.class
+com\appsfactory\runner\TestRunner.class
+com\appsfactory\stepDefinitions\AmazonCheckoutStepDefinitions.class
+com\appsfactory\helper\WaitHelper.class
+com\appsfactory\pageObjects\CheckoutPage.class
+com\appsfactory\pageObjects\HomePage.class
