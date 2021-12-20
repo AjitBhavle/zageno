@@ -1,23 +1,19 @@
 package com.appsfactory.stepDefinitions;
 
+import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriverException;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 import com.appsfactory.base.Base;
 import com.appsfactory.enums.Browsers;
 import com.appsfactory.helper.LoggerHelper;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.cucumber.listener.Reporter;
+import com.google.common.io.Files;
 
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
@@ -61,18 +57,27 @@ public class ServiceHooks {
 	public void endTest(Scenario scenario) {
 		if (scenario.isFailed()) {
 
+			String screenshotName = scenario.getName().replaceAll(" ", "_");
 			try {
-				log.info(scenario.getName() + " is Failed");
-				final byte[] screenshot = ((TakesScreenshot) Base.driver).getScreenshotAs(OutputType.BYTES);
-				scenario.embed(screenshot, "htmlReportsAndScreenshots/screenshots/png"); // ... and embed it in
-			} catch (WebDriverException e) {
-				e.printStackTrace();
-			}
+				//This takes a screenshot from the driver at save it to the specified location
+				File sourcePath = (((TakesScreenshot) Base.driver)).getScreenshotAs(OutputType.FILE);
+				
+				//Building up the destination path for the screenshot to save
+				//Also make sure to create a folder 'screenshots' with in the cucumber-report folder
+				File destinationPath = new File(System.getProperty("user.dir") + "/reports/screenshots/" + screenshotName + ".png");
+				
+				//Copy taken screenshot from source location to destination location
+				Files.copy(sourcePath, destinationPath);   
+
+				//This attach the specified screenshot to the test
+				Reporter.addScreenCaptureFromPath(destinationPath.toString());
+			} catch (IOException e) {
+			} 
 
 		} else {
 			try {
 				log.info(scenario.getName() + " is pass");
-				scenario.embed(((TakesScreenshot) Base.driver).getScreenshotAs(OutputType.BYTES), "htmlReportsAndScreenshots/screenshots/png");
+				scenario.embed(((TakesScreenshot) Base.driver).getScreenshotAs(OutputType.BYTES), "reports/screenshots/png");
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
