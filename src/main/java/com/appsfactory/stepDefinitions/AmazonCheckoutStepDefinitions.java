@@ -26,8 +26,7 @@ public class AmazonCheckoutStepDefinitions extends Base {
 	public void navigate_to_url(String arg1){
 		driver.get(arg1);
 		homePage.waitUntilHomePageToLoad();
-		Assert.assertTrue("User has landed on page",false);
-		 //homePage.isSearchIconDisplayed()
+		Assert.assertTrue("User has landed on page",homePage.isSearchIconDisplayed());
 	}
 	
 	@When("^Search for cheapest \"([^\"]*)\" and add to cart$")

@@ -1,6 +1,10 @@
 
 # Challenge 1: Web automation framework setup and scenarios creation
-
+## Description: 
+- Set Up a Web Testing Project for Chrome that executes the following Test Case.
+- As a new Amazon user, I want to search for the cheapest Snickers and Skittles on the page.
+- Add the cheapest ones to your Basket and check if the basket calculates the result correctly
+- Check if on Checkout, without an account, the user gets redirected to the registration page.
 ## **Pre-requisite:**
 - JDK 8+ should be installed
 - Maven path should be set in system path(MAVEN)
@@ -110,7 +114,11 @@
   ## Driver exe files:
    - You will find driver exe files under below path
      '**/appsfactory/driver**' 
-     
+
+## Execution Summary: 
+Please find below screenshot where you can see the test cases are executed successfully.
+   ![sample](https://github.com/AjitBhavle/appsFactory/blob/master/images/extentReport.PNG)
+   
 ## Screenshots on extent report:
 ![sample](https://github.com/AjitBhavle/appsFactory/blob/master/images/Screenshot.PNG)
 ![sample](https://github.com/AjitBhavle/appsFactory/blob/master/images/Screenshot1.PNG)
