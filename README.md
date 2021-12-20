@@ -112,8 +112,8 @@
      '**/appsfactory/driver**' 
      
 ## Screenshots on extent report:
-	[sample](https://github.com/AjitBhavle/appsFactory/blob/master/images/Screenshot.PNG)
-	[sample](https://github.com/AjitBhavle/appsFactory/blob/master/images/Screenshot1.PNG)
+![sample](https://github.com/AjitBhavle/appsFactory/blob/master/images/Screenshot.PNG)
+![sample](https://github.com/AjitBhavle/appsFactory/blob/master/images/Screenshot1.PNG)
 	
 ## For Extent report generation and capturing screenshots refer to below link
 [Extent repor](https://www.toolsqa.com/selenium-cucumber-framework/cucumber-extent-report/)
