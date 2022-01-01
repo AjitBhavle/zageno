@@ -1,1 +1,1 @@
-src/test/resources/text.txt filter=git-crypt diff=git-crypt
+src/test/resources/data.properties filter=git-crypt diff=git-crypt
