@@ -1,4 +1,4 @@
-package appsfactory.appsfactory;
+package zageno.zageno;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

@@ -17,12 +17,12 @@
   <protocol>https</protocol> 
 <!--  title of the document 
   --> 
--- <documentTitle>AppsFactory</documentTitle>
+-- <documentTitle>Zageno</documentTitle>
 <!--  report name - displayed at top-nav 
   --> 
-<reportName>AppsFactory_CaseStudy:</reportName> 
+<reportName>zageno_CaseStudy:</reportName> 
 
-<reportHeadline>AppsFactory_CaseStudy</reportHeadline> 
+<reportHeadline>zageno_CaseStudy</reportHeadline> 
 
 <!--  global date format override 
   --> 

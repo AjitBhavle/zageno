@@ -1,4 +1,4 @@
-package com.appsfactory.enums;
+package com.zageno.enums;
 
 public enum OS {
 	

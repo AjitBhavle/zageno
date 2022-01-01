@@ -1,4 +1,4 @@
-package com.appsfactory.stepDefinitions;
+package com.zageno.stepDefinitions;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -9,11 +9,11 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
-import com.appsfactory.base.Base;
-import com.appsfactory.enums.Browsers;
-import com.appsfactory.helper.LoggerHelper;
 import com.cucumber.listener.Reporter;
 import com.google.common.io.Files;
+import com.zageno.base.Base;
+import com.zageno.enums.Browsers;
+import com.zageno.helper.LoggerHelper;
 
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
@@ -37,9 +37,9 @@ public class ServiceHooks {
 		prop.load(fis);
 	
 		// mvn test -Dbrowser=chrome
-		String browserName=System.getProperty("browser"); // Uncomment this line if
+		//String browserName=System.getProperty("browser"); // Uncomment this line if
 		// you are sending parameter from Maven
-		//String browserName = prop.getProperty("browser");// comment this line if you are sending parameter from Maven
+		String browserName = prop.getProperty("browser");// comment this line if you are sending parameter from Maven
 		System.out.println(browserName);
 		if (browserName.contains("chrome")) {
 			testBase.selectBrowser(Browsers.CHROME.name());
@@ -54,7 +54,7 @@ public class ServiceHooks {
 	}
 
 	@After
-	public void endTest(Scenario scenario) {
+	public void endTest(Scenario scenario) throws IOException {
 		if (scenario.isFailed()) {
 
 			String screenshotName = scenario.getName().replaceAll(" ", "_");
@@ -72,17 +72,13 @@ public class ServiceHooks {
 				//This attach the specified screenshot to the test
 				Reporter.addScreenCaptureFromPath(destinationPath.toString());
 			} catch (IOException e) {
+				Reporter.addScreenCaptureFromPath("Exception occured is: "+e.getMessage()+e.getCause());
+				Base.driver.quit();
 			} 
 
 		} else {
-			try {
-				log.info(scenario.getName() + " is pass");
-				scenario.embed(((TakesScreenshot) Base.driver).getScreenshotAs(OutputType.BYTES), "reports/screenshots/png");
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
+				log.info(scenario.getName() + " is passed");
 		}
-
 		Base.driver.quit();
 	}
 }

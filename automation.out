@@ -1,2 +1,2 @@
-2021-12-20 10:12:165 INFO  ServiceHooks:79 - Select items on amazon and validate their total is pass
-2021-12-20 10:12:908 INFO  ServiceHooks:79 - Select items on amazon and validate their total is pass
+2022-01-01 11:01:743 INFO  ServiceHooks:80 - Add product to cart and complete the checkout process is passed
+2022-01-01 12:01:85 INFO  ServiceHooks:80 - Validate placed order in backend application is passed

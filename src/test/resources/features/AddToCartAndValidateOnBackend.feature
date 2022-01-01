@@ -1,14 +1,16 @@
 #Author: ajitbhavle93@gmail.com
+Feature: As a Zageno user I should be able to login and should able to place order
 
-Feature: As a Amazon user I should be able to login and logout with valid credentials
-
-  Scenario: Select items on amazon and validate their total
-    Given Navigate to url "https://www.amazon.in/"
-    When Search for cheapest "snickers chocolate bar" and add to cart
-    And Search for cheapest "skittles candy" and add to cart
-    Then Validate cart total
+  Scenario: Add product to cart and complete the checkout process
+    Given Navigate to url "https://nj-coding-challenge.zageno.com/"
+    And Login to applicatio with username and password
+    When Select the product and add to cart
+    Then Add PO number to order
+    And Validate cart total and cost center
     And Click on checkout button
-    And User should redirect to login Or registration page
-    
-  Scenario: Select items on amazon and validate their total
-    Given Adding test scenaio
+    And Get order number
+
+  Scenario: Validate placed order in backend application
+    Given Navigate to url "https://nj-coding-challenge-admin.zageno.com/"
+    And Login with Okta
+    Then Search the product number and validate PO number on product detail page

@@ -1,11 +1,11 @@
-package com.appsfactory.base;
+package com.zageno.base;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import com.appsfactory.enums.Browsers;
-import com.appsfactory.enums.OS;
+import com.zageno.enums.Browsers;
+import com.zageno.enums.OS;
 
 public class Base {
 
