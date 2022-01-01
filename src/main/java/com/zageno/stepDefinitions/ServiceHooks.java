@@ -37,9 +37,9 @@ public class ServiceHooks {
 		prop.load(fis);
 	
 		// mvn test -Dbrowser=chrome
-		//String browserName=System.getProperty("browser"); // Uncomment this line if
+		String browserName=System.getProperty("browser"); // Uncomment this line if
 		// you are sending parameter from Maven
-		String browserName = prop.getProperty("browser");// comment this line if you are sending parameter from Maven
+		//String browserName = prop.getProperty("browser");// comment this line if you are sending parameter from Maven
 		System.out.println(browserName);
 		if (browserName.contains("chrome")) {
 			testBase.selectBrowser(Browsers.CHROME.name());
