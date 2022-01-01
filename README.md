@@ -80,7 +80,7 @@
   - **Note: For command line execution no need to make changes in code.**
 
   ## From eclipse execution: 
-  - Before doing eclipse execution please do below changes in ServiceHook.java file(**/zageno/src/main/java/com/appsfactory/stepDefinitions/**)
+  - Before doing eclipse execution please do below changes in ServiceHook.java file(**/zageno/src/main/java/com/zageno/stepDefinitions/**)
    	- If you are executing test cases from editor(Eclipse) then make below changes in "ServiceHook.java" file changes.
        	- Comment below line if you are executing test cases from editor. 
      	 	**(String browserName=System.getProperty("browser");)**
