@@ -9,7 +9,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/resources/features/AddToCartAndValidateOnBackend.feature", glue = { "com/zageno/stepDefinitions" }, 
+@CucumberOptions(features = "src/test/resources/features/", glue = { "com/zageno/stepDefinitions" }, 
 plugin = { "com.cucumber.listener.ExtentCucumberFormatter:reports/cucumber-reports/report.html"},
 		monochrome = true, dryRun = false)
 public class TestRunner {

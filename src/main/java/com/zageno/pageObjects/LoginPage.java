@@ -116,25 +116,25 @@ public class LoginPage {
 	// Wait methods
 	public void waitUntilHomePageToLoad() {
 		Reporter.addStepLog("WaitUntil home page to load");
-		waitHelper.WaitForElement(homeSearchInputBox, 5000);
+		waitHelper.WaitForElement(homeSearchInputBox, 5);
 	}
 
 	public void waitUntilLoginBtnLoad() {
 		Reporter.addStepLog("WaitUntil loginBtn to load");
-		waitHelper.WaitForElement(loginBtn, 3000);
+		waitHelper.WaitForElement(loginBtn, 5);
 	}
 	
 	public void waitUntilNextBtnLoad() {
 		Reporter.addStepLog("WaitUntil nextBtn to load");
-		waitHelper.WaitForElement(nextBtn, 3000);
+		waitHelper.WaitForElement(nextBtn, 5);
 	}
 
 	public void waitUntilPasswordPageToLoad() {
-		waitHelper.WaitForElement(signInBtn, 3000);
+		waitHelper.WaitForElement(signInBtn, 5);
 	}
 	
 	public void waitUntilOktaPageToLoad() {
-		waitHelper.WaitForElement(loginWitOkta, 3000);
+		waitHelper.WaitForElement(loginWitOkta, 5);
 	}
 
 	public void loginToFrontEndApplication() throws IOException {

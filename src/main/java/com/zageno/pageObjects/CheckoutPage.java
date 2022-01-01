@@ -232,22 +232,22 @@ public class CheckoutPage {
 
 	// Wait methods
 	public void waitUntilCartPageToLoad() {
-		waitHelper.WaitForElement(cartItems, 3000);
+		waitHelper.WaitForElement(cartItems, 5);
 		Reporter.addStepLog("Wait until cart page to load");
 	}
 
 	public void waitUntil_PO_NumberFieldToLoad() {
-		waitHelper.WaitForElement(poNumber, 3000);
+		waitHelper.WaitForElement(poNumber, 5);
 		Reporter.addStepLog("Wait until poNumber field to load");
 	}
 
 	public void waitUntilAddressAndPaymentPageToLoad() {
-		waitHelper.WaitForElement(agreeAndPurchaseBtn, 3000);
+		waitHelper.WaitForElement(agreeAndPurchaseBtn, 5);
 		Reporter.addStepLog("Wait until address and payment page to load");
 	}
 
 	public void waitUntilConfirmationPageToLoad() {
-		waitHelper.WaitForElement(orderNumber, 3000);
+		waitHelper.WaitForElement(orderNumber, 5);
 		Reporter.addStepLog("Wait until order confirmation page to load");
 	}
 

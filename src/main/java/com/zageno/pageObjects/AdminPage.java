@@ -109,16 +109,16 @@ public class AdminPage {
 
 	// Wait methods
 	public void waitUntilHomePageToLoad() {
-		helper.WaitForElement(orderingModule, 3000);
+		helper.WaitForElement(orderingModule, 5);
 	}
 
 	public void waitUntilProductDetailPageToLoad() {
-		helper.WaitForElement(poNumber, 3000);
+		helper.WaitForElement(poNumber, 5);
 	}
 
 	public void waitUntilProductListToLoad() {
 		Reporter.addStepLog("WaitUntil product list to load");
-		helper.WaitForElement(productList, 3000);
+		helper.WaitForElement(productList, 5);
 	}
 
 	// Hover mouse to element methods

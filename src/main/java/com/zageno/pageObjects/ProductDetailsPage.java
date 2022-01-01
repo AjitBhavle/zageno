@@ -132,21 +132,21 @@ public class ProductDetailsPage {
 	// Wait methods
 	
 	public void waitUntilHomePageToLoad() {
-		helper.WaitForElement(marketplace, 3000);
+		helper.WaitForElement(marketplace, 5);
 	} 
 	
 	public void waitUntilProductDetailPageToLoad() {
-		helper.WaitForElement(addToCartButton, 3000);
+		helper.WaitForElement(addToCartButton, 5);
 	}
 
 	public void waitUntilProductListToLoad() {
 		Reporter.addStepLog("WaitUntil product list to load");
-		helper.WaitForElement(productList, 3000);
+		helper.WaitForElement(productList, 5);
 	}
 	
 	public void waitUntilCartCountToLoad() {
 		Reporter.addStepLog("WaitUntil cart to load");
-		helper.WaitForElement(cartCount, 3000);
+		helper.WaitForElement(cartCount, 5);
 	}
 
 	// Hover mouse to element methods

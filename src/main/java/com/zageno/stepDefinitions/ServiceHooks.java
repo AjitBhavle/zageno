@@ -72,8 +72,6 @@ public class ServiceHooks {
 				//This attach the specified screenshot to the test
 				Reporter.addScreenCaptureFromPath(destinationPath.toString());
 			} catch (IOException e) {
-				Reporter.addScreenCaptureFromPath("Exception occured is: "+e.getMessage()+e.getCause());
-				Base.driver.quit();
 			} 
 
 		} else {

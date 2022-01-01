@@ -1,2 +1,3 @@
-2022-01-01 11:01:743 INFO  ServiceHooks:80 - Add product to cart and complete the checkout process is passed
-2022-01-01 12:01:85 INFO  ServiceHooks:80 - Validate placed order in backend application is passed
+2022-01-01 15:01:261 INFO  ServiceHooks:78 - Add product to cart and complete the checkout process is passed
+2022-01-01 15:01:550 INFO  ServiceHooks:78 - Validate placed order in backend application is passed
+2022-01-01 15:01:913 INFO  ServiceHooks:78 - Testing scenario is passed
