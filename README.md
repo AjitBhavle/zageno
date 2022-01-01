@@ -1,12 +1,15 @@
 
-# Assignment heading: Create automation framework and place order from front-end application and validate same order in back-end application
+# Create automation framework and place order from front-end application and validate same order in back-end application
 
 ## Description: 
+
 - Set Up a Web Testing Project for Chrome that executes the following Test Case.
 - As a new Amazon user, I want to search for the cheapest Snickers and Skittles on the page.
 - Add the cheapest ones to your Basket and check if the basket calculates the result correctly
 - Check if on Checkout, without an account, the user gets redirected to the registration page.
+
 ## **Pre-requisite:**
+
 - JDK 8+ should be installed
 - Maven path should be set in system path(**MAVEN**)
 - System veriable path should be set "**JAVA_HOME**"
@@ -15,7 +18,8 @@
 
 ## **Usage**
 
-- For maven, add the following as dependency in pom.xml file and save the file. This will download all the dependency from maven central repo and store it on local(.m2 folder in user directory):
+- For maven, add the following as dependency in pom.xml file and save the file. This will download all the dependency from maven central repository and store it on local(.m2 folder in user directory):
+
 		<!-- These are the cucumber dependencies -->
 		<dependency>
 			<groupId>info.cukes</groupId>
@@ -102,7 +106,10 @@
      '**/zageno/src/main/java/com/zageno/pageObject**'  
   ## stepDefinitions package: 
   - You will find all feature steps implemeted under below folder path.
-     '**/zageno/src/main/java/com/zageno/stepDefinitions**'   
+     '**/zageno/src/main/java/com/zageno/stepDefinitions**'  
+  ## Runner package: 
+  - This will be the starting point for test execution where we define the feature files path and glue code path.
+     '**/zageno/src/test/java/com/zageno/runner**' 
   ## Resources package: 
   - You will find all feature files, extent report config and data related files(data.peroperties) under below folder path.
      '**/zageno/src/test/resources**'
@@ -116,8 +123,8 @@
 
 ## Execution Summary: 
 Please find below screenshot where you can see the test cases are executed successfully.
-   ![sample](https://github.com/AjitBhavle/appsFactory/blob/master/images/executionSummary1.PNG)
-   ![sample](https://github.com/AjitBhavle/appsFactory/blob/master/images/executionSummary2.PNG)
+   ![sample](https://github.com/AjitBhavle/zageno/blob/master/images/executionSummary1.PNG)
+   ![sample](https://github.com/AjitBhavle/zageno/blob/master/images/executionSummary2.PNG)
    
 ## Screenshots on extent report: 
 - User can able to see the failure screenshots on reports. see below
@@ -125,4 +132,4 @@ Please find below screenshot where you can see the test cases are executed succe
 ![sample](https://github.com/AjitBhavle/zageno/blob/master/images/screenshotOnReport.PNG)
 	
 ## For Extent report generation and capturing screenshots refer to below link
-[Extent repor](https://www.toolsqa.com/selenium-cucumber-framework/cucumber-extent-report/)
+[Extent report](https://www.toolsqa.com/selenium-cucumber-framework/cucumber-extent-report/)
